@@ -6,4 +6,4 @@ before_install:
     -   docker build -t nmolankar/docker-react    -f Dockerfile.dev   .
 
 script:
-    -   docker run nmolankar/docker-react npm run test -- -- coverage
+    -   docker run  -e CI=true nmolankar/docker-react npm run test -- --coverage
